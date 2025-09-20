@@ -8,51 +8,56 @@ html {
 }
 
 body {
-    background: darkslategray;
+    background: rgb(38, 71, 71);  
 }
-
+.center{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 250%;
+  align-items: flex-start;
+  background: #11457c;
+  }
+.menu{
+  width: 100%;
+  height:100px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: fit-content;
+  font-family: poppins;
+  font-size: 50px;
+  color:white;
+  font-weight: 600;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu{
+  display: none;
+}
+.items {
+  padding: 10px 18px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: radius 5mm;
+  text-decoration: none;
+  font-family: poppins;
+    transition: .5s;
+    font-size: 20px;
+}
 a {
     color: azure;
     padding: 10px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    z-index: 100;
-
-}
-
-nav h1 {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    color: antiquewhite;
-}
-
-
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    font-size: 20px;
-    font-weight: 500px;
-    transition: .5s;
-    text-decoration: none;
-}
-
-nav ul li:hover a,
-nav ul li.active a {
-    color: rgb(74, 129, 64);
-}
 
 .home {
    
@@ -62,11 +67,11 @@ nav ul li.active a {
 }
 
 .home-info h1 {
-    font-size: 60px;
+    font-size: 3rem;
 }
 
 .home-info p {
-    font-size: 25px;
+    font-size: 1.6rem;
     margin: 20px 0 25px;
 }
 .home-info .btn-sci{
@@ -111,10 +116,11 @@ nav ul li.active a {
     padding: 8px;
     font-size: 30px;
     color: rgb(37, 201, 37);
-    margin: 0 8px;
+    margin:  8px;
     border-radius: 20%;
     text-decoration: none;
-    box-shadow: 0 0 10px rgb(244, 251, 244)
+    box-shadow: 0 0 10px rgb(205, 206, 205)
+    
 }
 .home-img {
     width: 32vw;
@@ -129,6 +135,7 @@ nav ul li.active a {
     aspect-ratio: 1/1;
 
 }
+
 .about{
     width:auto ;
     padding: 100px 0px;
@@ -171,7 +178,7 @@ nav ul li.active a {
   display: flex;
   flex-direction: column;
   width: 180px;
-  background: rgb(155, 152, 146);
+  background: rgb(59, 43, 9);
 }
 
 label {
@@ -193,7 +200,7 @@ input:focus, textarea:focus {
 }
 button {
   width:160px;
-  background: rgba(230, 228, 228, 0.4);
+  background: rgba(251, 248, 248, 0.4);
   text-align:center;
   padding: 0.8rem;
   font-weight: bold;
@@ -207,39 +214,222 @@ button:hover {
   background: #c4c2a000;
 }
 #project {
-  background: #f5f5f5;  
+  background: oklab(100% 0 -0.00011 / 0.036);  
   padding: 40px 20px;
   border-radius: 12px;
-  margin: 10px auto;
-  max-width: 800px;
+  margin: 20px auto;
+  max-width: 1100px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #project h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #381414;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fffdfd;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-
-#project a {
-  display: inline-block;
-  margin: 15px;
-  padding: 12px 20px;
-  background: #007BFF;  
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s ease;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+/* Grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-#project a:hover {
-  background: #7292b3;   
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.project-card a:hover {
+  background: #0056b3;
+}
+
+
+
+/* Hamburger styling */
+.hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none; /* hide on desktop */
+  margin-left: 500px;
+}
+
+/* moble  */
+@media (max-width: 768px) {
+  .menu{
+    flex-direction: column;
+  }
+  .menu .logo label {
+    display:block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    }
+
+  
+  .main .logo{
+    width: 100%;
+ 
+    
+  }
+ 
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home-img {
+    width: 70vw;
+    height: 70vw;
+    margin: 20px auto;
+  }
+
+  .about {
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  form {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .items {
+    display: none;
+    flex-direction: column;
+    background: #11457c;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+     align-items: center;
+  }
+
+  
+  .hamburger {
+    display: block;
+     margin-left: auto;  
+  }
+  #menu:checked ~ .items {
+    display: flex;
+  }
+}
+
+
+/*  Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .menu{
+    flex-direction: column;
+  }
+  .menu .logo label {
+     display:none ;
+    cursor: pointer;
+    position:relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  
+
+  .home-info h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-img {
+    width: 45vw;
+    height: 45vw;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* two projects side by side */
+  }
+
+  .about {
+    font-size: 1.1rem;
+    padding: 50px 20px;
+  }
+
+  form {
+    max-width: 80%;
+    margin: auto;
+  }
+
+}
+
+/* Desktop (above 1024px) */
+@media (min-width: 1025px) {
+  .home {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+  }
+
+  .home-img {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .about {
+    font-size: 1.2rem;
+    padding: 80px 60px;
+  }
+   form {
+    max-width: 500px;
+    margin: auto;
+   }
+
 }

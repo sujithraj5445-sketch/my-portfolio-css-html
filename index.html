@@ -10,18 +10,26 @@
 </head>
 
 <body>
-    <header>
-        <!-- navigation links -->
-        <nav>
-            <h1 class="logo">My protfolio</h1>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#project">MY WORKS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="center">
+        <div class="menu">
+            <input type="checkbox" id="menu" hidden>
+            <div class="logo">my protfolio
+                <label for="menu" class="hamburger">
+                    <i class='bx bx-menu'></i>
+                </label>
+                
+            </div>
+            <div class="items">
+                <a href="#home" class="items">HOME</a>
+                <a href="#about" class="items">ABOUT</a>
+                <a href="#project" class="items">MYWORKS</a>
+                <a href="#contact" class="items">CONTACT</a>
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- home  -->
     <section id="home" class="home">
         <div class="home-info">
@@ -56,7 +64,7 @@
         <div class="main">
             <div about-text>
                 <h2>about me</h2>
-                <p>I’m a passionate Web Developer with a strong interest in creating modern, responsive, and
+                <p>Im a passionate Web Developer with a strong interest in creating modern, responsive, and
                     user-friendly websites. I enjoy turning ideas into functional designs using HTML, CSS, JavaScript,
                     and exploring new technologies to improve my skills. My focus is on building clean, efficient code
                     and delivering smooth digital experiences.</p>
@@ -67,25 +75,45 @@
     </section>
     <br>
 
+
     <!-- projects sections  -->
     <section id="project">
-        <h2> My projects </h2>
-        <br>
-        <a href="https://www.flipkart.com/"> vist my project 1 </a>
-        <br><b></b>
+        <h2>my projects</h2>
+        <div class="project-grid">
+            <!-- project 1  -->
+            <div class="project-card">
+                <img src="https://inc42.com/cdn-cgi/image/quality=75/https://asset.inc42.com/2016/08/flipkart-final.jpg"
+                    alt="project 1">
+                <h3>e-commer</h3>
+                <p>A simple online shopping platform by Flipkart</p>
+                <a href="https://www.flipkart.com/" target="_blank"> viwe project</a>
+            </div>
+            <!-- project 2 -->
+            <div class="project-card">
+                <img src="https://play-lh.googleusercontent.com/8F-0kIQuTleN9DD43WlxIz-4mqmPJ3-978fr1vYF0q_QoZRrlaD3znctc4kWguHdhUCU"
+                    alt="project 2">
+                <h3>Shopping Platform</h3>
+                <p>Online shopping experience built with HTML and CSS.</p>
+                <a href="https://www.meesho.com/" target="_blank">View Project</a>
+            </div>
 
-        <a href="https://www.meesho.com/?srsltid=AfmBOopIqeAbH4a7PT67MLep7gDKYCi2_izeWmGmO5YeaRyasb-zIiWq"> oniline
-            shoping platform projrct 2 </a>
-        <br>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWhkOxUnvTRDriQ2yNDzQS8lipRpPBm_z1nA&s"
+                    alt="Project 3">
+                <h3>Blog Website</h3>
+                <p>A personal blog project showcasing HTML page layouts.</p>
+                <a href="https://github.com/sujithraj5445-sketch/my--blog-html-2/blob/main/intex.html"
+                    target="_blank">View Project</a>
+            </div>
 
-        <a href="https://github.com/sujithraj5445-sketch/my--blog-html-2/blob/main/intex.html">My blog html</a>
-        </main>
+        </div>
     </section>
 
     <!-- contact me  -->
 
     <div id="contact" class="container">
-        <h1>CONTACT  </h1>
+        <h1>CONTACT </h1>
 
         <form>
             <br>
@@ -120,4 +148,3 @@
 
 
 </body>
-
